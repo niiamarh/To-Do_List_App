@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="255dp"
+        android:layout_height="255dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/sbtodo_register" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/TextUserName"
+        app:hintEnabled="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Username"
+        android:background="@color/blue_500"
+        android:drawableStart="@drawable/ic_profile"
+        android:drawablePadding="5dp"
+        android:inputType="text"
+        android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextUserName"
+        android:layout_centerHorizontal="true"
+        app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter E-mail"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="5dp"
+        android:padding="12dp"
+        android:background="@color/blue_500"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Email"
+        android:layout_centerHorizontal="true"
+        app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_password_key"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:hint="Enter Password"
+            android:background="@color/blue_500" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Password"
+        android:layout_centerHorizontal="true"
+        app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/editCPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Repeat Password"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_password_key"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:background="@color/blue_500" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="129dp"
+        android:layout_height="66dp"
+        android:layout_below="@id/CPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue_700"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/textExistingUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Have An Account?"
+        android:textColor="@color/black"
+        android:layout_below="@id/signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

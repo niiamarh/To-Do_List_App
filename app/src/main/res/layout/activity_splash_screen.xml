@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="255dp"
+        android:layout_height="255dp"
+        app:srcCompat="@drawable/sbtodo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/textNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered By"
+        android:textColor="@color/black"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"/>
+
+    <ImageView
+        android:id="@+id/sblogo"
+        android:layout_width="298dp"
+        android:layout_height="151dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        app:srcCompat="@drawable/stanbiclogo" />
+
+
+</RelativeLayout>

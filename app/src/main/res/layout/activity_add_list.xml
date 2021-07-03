@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddList"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/NewInput"
+        android:layout_width="255dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/addnew" />
+
+    <EditText
+        android:layout_below="@+id/NewInput"
+        android:id="@+id/FirstName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:hint="Enter First Name"
+        android:background="@color/blue_500"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:drawableStart="@drawable/ic_profile"
+        android:drawablePadding="5dp"
+        android:padding="5dp"/>
+
+    <EditText
+        android:layout_below="@+id/FirstName"
+        android:id="@+id/LastName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:hint="Enter Last Name"
+        android:background="@color/blue_500"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:drawableStart="@drawable/ic_profile"
+        android:drawablePadding="5dp"
+        android:padding="5dp"/>
+
+    <EditText
+        android:layout_below="@+id/LastName"
+        android:id="@+id/PhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Phone Number"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_500"
+        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+        android:drawablePadding="5dp"
+        android:padding="5dp"/>
+
+    <ImageView
+        android:id="@+id/InputRecord"
+        android:layout_width="74dp"
+        android:layout_height="84dp"
+        android:layout_below="@+id/PhoneNo"
+        android:layout_alignRight="@+id/PhoneNo"
+        android:layout_marginTop="30dp"
+        android:onClick="buAdd"
+        app:srcCompat="@drawable/ic_add_circle" />
+
+</RelativeLayout>
