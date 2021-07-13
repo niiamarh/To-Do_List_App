@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        //add dummy data
+        //add dummy data info
         list.add(Todo_list(1,"Raphael","Ashai","0548969376"))
         list.add(Todo_list(2,"Christiana","Ashai","0277076826"))
         list.add(Todo_list(3,"Sarah","Ashai","0247933086"))
