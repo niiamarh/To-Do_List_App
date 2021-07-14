@@ -10,19 +10,21 @@ import kotlinx.android.synthetic.main.activity_add_list.*
 
 class AddList : AppCompatActivity() {
     val dbTable="List"
+    var id=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_list)
 
-        /*try{
+        try{
             var bundle:Bundle= intent.extras!!
             id=bundle.getInt("ID",0)
             if(id!=0) {
-                FirstName.setText(bundle.getString("name") )
-                PhoneNo.setText(bundle.getString("des") )
+                FirstName.setText(bundle.getString("FName") )
+                LastName.setText(bundle.getString("LName") )
+                PhoneNo.setText(bundle.getString("PhoneNumber") )
 
             }
-        }catch (ex:Exception){}*/
+        }catch (ex:Exception){}
     }
 
     fun buAdd(view:View){
@@ -33,11 +35,23 @@ class AddList : AppCompatActivity() {
         values.put("LName",LastName.text.toString())
         values.put("PhoneNumber",PhoneNo.text.toString())
 
-        val ID= dbManager.Insert(values)
-        if(ID>0){
-            Toast.makeText(this,"List is Added", Toast.LENGTH_LONG).show()
+        if(id==0) {
+            val ID = dbManager.Insert(values)
+            if (ID > 0) {
+                Toast.makeText(this, " note is added", Toast.LENGTH_LONG).show()
+                finish()
+            } else {
+                Toast.makeText(this, " cannot add note ", Toast.LENGTH_LONG).show()
+            }
         }else{
-            Toast.makeText(this,"Failed To Add", Toast.LENGTH_LONG).show()
+            var selectionArs= arrayOf(id.toString())
+            val ID = dbManager.Update(values,"ID=?",selectionArs)
+            if (ID > 0) {
+                Toast.makeText(this, " note is added", Toast.LENGTH_LONG).show()
+                finish()
+            } else {
+                Toast.makeText(this, " cannot add note ", Toast.LENGTH_LONG).show()
+            }
         }
 
     }

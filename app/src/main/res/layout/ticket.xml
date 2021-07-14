@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:background="@drawable/background_layout"
-        android:layout_margin="10pt"
+        android:layout_margin="5pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -55,15 +55,15 @@
 
             <ImageView
                 android:layout_marginRight="10dp"
-                android:id="@+id/imageView"
-                android:layout_width="60dp"
+                android:id="@+id/deletelist"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/outline_delete_black_24dp" />
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="60dp"
+                android:id="@+id/editlist"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/outline_edit_black_24dp" />

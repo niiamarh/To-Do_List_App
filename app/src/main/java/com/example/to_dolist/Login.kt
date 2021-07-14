@@ -41,6 +41,8 @@ class Login : AppCompatActivity() {
         }
 
         }
+
+    //Verifies if the email and password entered exists as a user and directs them to the home activity to view their to do list
     fun signInUser(email:String, password:String){
         auth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener(this){ task ->
@@ -54,6 +56,7 @@ class Login : AppCompatActivity() {
             }
     }
 
+    //Closes the activity when you back press double times in less than 2 seconds
     override fun onBackPressed() {
         if (backPressedTime + 2000 > System.currentTimeMillis()){
             super.onBackPressed()
